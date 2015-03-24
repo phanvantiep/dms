@@ -16,7 +16,7 @@ class CreateIntranHeadersTable extends Migration {
 		{
 			$table->increments('id');
 			$table->integer('company_id');
-			$table->string('sales_number', 12);
+			$table->string('intran_number', 12);
 			$table->string('invoice_number', 12);
 			$table->string('invoice_type', 3);
 			$table->integer('customer_id');

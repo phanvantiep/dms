@@ -33,7 +33,6 @@ class CreateSalesOrderDetailsTable extends Migration {
 			$table->timestamps();
 			$table->integer('created_by');
 			$table->integer('updated_by');
-
 		});
 	}
 
