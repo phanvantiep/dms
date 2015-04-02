@@ -12,13 +12,14 @@ class CreateIntranHeadersTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('intran_headers', function(Blueprint $table)
+		Schema::create('intrans', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->integer('company_id');
 			$table->string('intran_number', 12);
 			$table->string('invoice_number', 12);
 			$table->string('invoice_type', 3);
+			$table->string('intran_type', 3);
 			$table->integer('customer_id');
 			$table->integer('salesman_id');
 			$table->float('total_qty');
@@ -37,6 +38,8 @@ class CreateIntranHeadersTable extends Migration {
 			$table->string('payment_type');
 			$table->decimal('payment_ammount');
 			$table->integer('promotion_id');
+			$table->text('description');
+			$table->text('reason');
 			$table->timestamps();
 			$table->integer('created_by');
 			$table->integer('updated_by');
@@ -50,7 +53,7 @@ class CreateIntranHeadersTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('intran_headers');
+		Schema::drop('intrans');
 	}
 
 }

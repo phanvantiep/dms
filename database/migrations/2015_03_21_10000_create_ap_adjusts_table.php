@@ -22,7 +22,7 @@ class CreateApAdjustsTable extends Migration {
 			$table->smallInteger('payment_time');
 			$table->dateTime('tran_date');
 			$table->decimal('amount');
-			$table->string('paid_type');
+			$table->string('ar_type');
 			$table->text('description');
 			$table->text('reason');
 			$table->timestamps();
