@@ -24,8 +24,8 @@ class CreateBuyOrdersTable extends Migration {
 			$table->decimal('total_amount');
 			$table->float('tax_percent');
 			$table->decimal('tax_amount');
-			$table->decimal('percent_amount');
-			$table->decimal('discount_amount');
+			$table->decimal('percent_amount')->nullable();
+			$table->decimal('discount_amount')->nullable();
 			$table->decimal('final_amount');
 			$table->dateTime('order_date');
 			$table->dateTime('invoice_date');
@@ -34,7 +34,7 @@ class CreateBuyOrdersTable extends Migration {
 			$table->integer('site_id');
 			$table->string('payment_type');
 			$table->decimal('payment_ammount');
-			$table->integer('promotion_id');
+			$table->integer('promotion_id')->nullable();
 			$table->timestamps();
 			$table->integer('created_by');
 			$table->integer('updated_by');

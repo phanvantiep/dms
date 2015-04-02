@@ -2,14 +2,14 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Company extends Model {
+class Product extends Model {
 
 	/**
 	 * The database table used by the model.
 	 *
 	 * @var string
 	 */
-	protected $table = 'companies';
+	protected $table = 'products';
 
 	/**
 	 * The attributes that are mass assignable.
@@ -17,5 +17,6 @@ class Company extends Model {
 	 * @var array
 	 */
 	protected $fillable = [];
+
 
 }

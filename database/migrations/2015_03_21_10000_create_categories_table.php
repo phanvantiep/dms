@@ -18,8 +18,8 @@ class CreateCategoriesTable extends Migration {
 			$table->integer('company_id');
 			$table->string('code', 20);
 			$table->string('name', 500);
-			$table->text('description');
-			$table->string('picture', 255);
+			$table->text('description')->nullable();
+			$table->string('picture', 255)->nullable();
 			$table->smallInteger('status');
 			$table->timestamps();
 			$table->integer('created_by');

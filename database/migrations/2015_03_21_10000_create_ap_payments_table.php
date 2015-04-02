@@ -16,17 +16,17 @@ class CreateApPaymentsTable extends Migration {
 		{
 			$table->increments('id');
 			$table->integer('company_id');
+			$table->integer('vendor_id');
 			$table->string('buy_number', 12);
 			$table->string('invoice_number', 12);
 			$table->string('invoice_type', 3);
-			$table->integer('vendor_id');
 			$table->dateTime('invoice_date');
 			$table->decimal('total_amount');
 			$table->decimal('paid_amount');
 			$table->decimal('discount_amount');
 			$table->decimal('balance');
-			$table->text('description');
-			$table->text('reason');
+			$table->text('description')->nullable();
+			$table->text('reason')->nullable();
 			$table->timestamps();
 			$table->integer('created_by');
 			$table->integer('updated_by');

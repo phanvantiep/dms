@@ -18,7 +18,7 @@ class CreateTransportsTable extends Migration {
 			$table->increments('company_id');
 			$table->string('code', 20);
 			$table->string('number_vehicles', 50);
-			$table->text('description');
+			$table->text('description')->nullable();
 			$table->timestamps();
 			$table->integer('created_by');
 			$table->integer('updated_by');

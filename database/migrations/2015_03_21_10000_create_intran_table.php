@@ -12,31 +12,34 @@ class CreateIntranHeadersTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('intran_headers', function(Blueprint $table)
+		Schema::create('intrans', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->integer('company_id');
 			$table->string('intran_number', 12);
+			$table->string('intran_type', 3);
 			$table->string('invoice_number', 12);
 			$table->string('invoice_type', 3);
 			$table->integer('customer_id');
 			$table->integer('salesman_id');
 			$table->float('total_qty');
 			$table->decimal('total_amount');
-			$table->float('tax_percent');
-			$table->decimal('tax_amount');
+			$table->float('tax_percent')->nullable();
+			$table->decimal('tax_amount')->nullable();
 			$table->decimal('percent_amount');
-			$table->decimal('discount_amount');
+			$table->decimal('discount_amount')->nullable();
 			$table->decimal('final_amount');
 			$table->dateTime('tran_date');
 			$table->dateTime('invoice_date');
 			$table->string('status');
 			$table->integer('site_id');
-			$table->integer('to_site_id');
-			$table->integer('return_sales_order_id');
-			$table->string('payment_type');
-			$table->decimal('payment_ammount');
-			$table->integer('promotion_id');
+			$table->integer('to_site_id')->nullable();
+			$table->integer('return_sales_order_id')->nullable();
+			$table->string('payment_type')->nullable();
+			$table->decimal('payment_ammount')->nullable();
+			$table->integer('promotion_id')->nullable();
+			$table->text('description')->nullable();
+			$table->text('reason')->nullable();
 			$table->timestamps();
 			$table->integer('created_by');
 			$table->integer('updated_by');
@@ -50,7 +53,7 @@ class CreateIntranHeadersTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('intran_headers');
+		Schema::drop('intrans');
 	}
 
 }

@@ -31,7 +31,7 @@ class CreateCustomersTable extends Migration {
 			$table->string('type', 20)->nullable();
 			$table->decimal('debit_limited')->nullable();
 			$table->decimal('payment_term')->nullable();
-			$table->smallInteger('pay_cash');
+			$table->smallInteger('pay_cash')->nullable();
 			$table->timestamps();
 			$table->integer('created_by');
 			$table->integer('updated_by');

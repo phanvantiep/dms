@@ -22,9 +22,9 @@ class CreateArAdjustsTable extends Migration {
 			$table->smallInteger('payment_time');
 			$table->dateTime('tran_date');
 			$table->decimal('amount');
-			$table->string('paid_type');
-			$table->text('description');
-			$table->text('reason');
+			$table->string('paid_type', 3);
+			$table->text('description')->nullable();
+			$table->text('reason')->nullable();
 			$table->timestamps();
 			$table->integer('created_by');
 			$table->integer('updated_by');

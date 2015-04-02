@@ -19,7 +19,7 @@ class CreateSitesTable extends Migration {
 			$table->string('code', 20);
 			$table->string('name', 500);
 			$table->smallInteger('status');
-			$table->string('location', 500);
+			$table->string('location', 500)->nullable();
 			$table->timestamps();
 			$table->integer('created_by');
 			$table->integer('updated_by');

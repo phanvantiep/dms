@@ -27,8 +27,8 @@ class CreateArPaymentsTable extends Migration {
 			$table->decimal('discount_amount');
 			$table->decimal('sales_return');
 			$table->decimal('balance');
-			$table->text('description');
-			$table->text('reason');
+			$table->text('description')->nullable();
+			$table->text('reason')->nullable();
 			$table->timestamps();
 			$table->integer('created_by');
 			$table->integer('updated_by');
