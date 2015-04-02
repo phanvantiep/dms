@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class SalesOrderDetail extends Model {
+class SalesOrderDetail extends BaseModel {
 
 	/**
 	 * The database table used by the model.
@@ -10,6 +10,8 @@ class SalesOrderDetail extends Model {
 	 * @var string
 	 */
 	protected $table = 'sales_order_details';
+	
+	protected $keycache = 'cache_sales_order_details_';
 
 	/**
 	 * The attributes that are mass assignable.

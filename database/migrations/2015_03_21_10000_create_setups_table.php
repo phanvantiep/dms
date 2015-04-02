@@ -15,7 +15,7 @@ class CreateSetupsTable extends Migration {
 		Schema::create('setups', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->increments('company_id');
+			$table->integer('company_id');
 			$table->string('code', 50);
 			$table->string('value', 255);
 			$table->text('description')->nullable();
@@ -32,7 +32,7 @@ class CreateSetupsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('transports');
+		Schema::drop('setups');
 	}
 
 }

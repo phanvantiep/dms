@@ -20,7 +20,7 @@ class CreateProductsTable extends Migration {
 			$table->string('code', 50);
 			$table->string('name', 500);
 			$table->string('picture', 255);
-			$table->decimalinteger('category_id');
+			$table->integer('category_id');
 			$table->decimal('whole_sales_price');
 			$table->decimal('odd_sales_price');
 			$table->decimal('whole_sales_cash_price');
@@ -39,7 +39,7 @@ class CreateProductsTable extends Migration {
 			$table->float('weight');
 			$table->float('height');
 			$table->float('length');
-			$table->integer('order');
+			$table->integer('ordering');
 			$table->string('bar_code');
 			$table->float('salary_rate');
 			$table->decimal('amount_rate');

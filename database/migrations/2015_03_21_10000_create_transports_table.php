@@ -15,7 +15,7 @@ class CreateTransportsTable extends Migration {
 		Schema::create('transports', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->increments('company_id');
+			$table->integer('company_id');
 			$table->string('code', 20);
 			$table->string('number_vehicles', 50);
 			$table->text('description')->nullable();

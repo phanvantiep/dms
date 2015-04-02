@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class INTranDetail extends Model {
+class INTranDetail extends BaseModel {
 
 	/**
 	 * The database table used by the model.
@@ -10,6 +10,8 @@ class INTranDetail extends Model {
 	 * @var string
 	 */
 	protected $table = 'intran_details';
+	
+	protected $keycache = 'cache_intran_details_';
 
 	/**
 	 * The attributes that are mass assignable.

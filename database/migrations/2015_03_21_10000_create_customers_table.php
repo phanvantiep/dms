@@ -26,7 +26,6 @@ class CreateCustomersTable extends Migration {
 			$table->integer('ward_id')->nullable();
 			$table->integer('district_id')->nullable();
 			$table->string('state', 50)->nullable();
-			$table->string('city', 50)->nullable();
 			$table->string('zipcode', 50)->nullable();
 			$table->string('country_id', 3)->nullable();
 			$table->integer('saleman_id');
@@ -43,6 +42,7 @@ class CreateCustomersTable extends Migration {
 			$table->decimal('debit_limited')->nullable();
 			$table->decimal('payment_term')->nullable();
 			$table->smallInteger('pay_cash')->nullable();
+			$table->integer('ordering');
 			$table->timestamps();
 			$table->integer('created_by');
 			$table->integer('updated_by');

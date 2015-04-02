@@ -43,6 +43,9 @@ class Authenticate {
 				return redirect()->guest('auth/login');
 			}
 		}
+		
+		// set language
+		\App::setLocale(\Session::get('lang'));
 
 		return $next($request);
 	}

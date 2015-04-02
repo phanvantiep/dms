@@ -19,6 +19,7 @@ class CreateUnitsTable extends Migration {
 			$table->string('code', 20);
 			$table->string('name', 500);
 			$table->smallInteger('status');
+			$table->integer('ordering');
 			$table->timestamps();
 			$table->integer('created_by');
 			$table->integer('updated_by');

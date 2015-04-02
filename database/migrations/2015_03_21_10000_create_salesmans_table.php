@@ -21,6 +21,7 @@ class CreateSalesmansTable extends Migration {
 			$table->integer('transport_id');
 			$table->smallInteger('status');
 			$table->float('salary_rate');
+			$table->integer('ordering');
 			$table->timestamps();
 			$table->integer('created_by');
 			$table->integer('updated_by');

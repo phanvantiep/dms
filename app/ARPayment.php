@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class ARPayment extends Model {
+class ARPayment extends BaseModel {
 
 	/**
 	 * The database table used by the model.
@@ -10,6 +10,8 @@ class ARPayment extends Model {
 	 * @var string
 	 */
 	protected $table = 'ar_payments';
+	
+	protected $keycache = 'cache_ar_payments_';
 
 	/**
 	 * The attributes that are mass assignable.

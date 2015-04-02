@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCustomersTable extends Migration {
+class CreateVendorsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,7 +12,7 @@ class CreateCustomersTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('customers', function(Blueprint $table)
+		Schema::create('vendors', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->integer('company_id');
@@ -25,13 +25,13 @@ class CreateCustomersTable extends Migration {
 			$table->integer('ward_id')->nullable();
 			$table->integer('district_id')->nullable();
 			$table->string('state', 50)->nullable();
-			$table->string('city', 50)->nullable();
 			$table->string('zipcode', 50)->nullable();
 			$table->string('country_id', 3)->nullable();
 			$table->string('type', 20)->nullable();
 			$table->decimal('debit_limited')->nullable();
 			$table->decimal('payment_term')->nullable();
 			$table->smallInteger('pay_cash')->nullable();
+			$table->integer('ordering');
 			$table->timestamps();
 			$table->integer('created_by');
 			$table->integer('updated_by');
@@ -45,7 +45,7 @@ class CreateCustomersTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('customers');
+		Schema::drop('vendors');
 	}
 
 }

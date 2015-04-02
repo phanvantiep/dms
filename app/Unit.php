@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Unit extends Model {
+class Unit extends BaseModel {
 
 	/**
 	 * The database table used by the model.
@@ -10,6 +10,8 @@ class Unit extends Model {
 	 * @var string
 	 */
 	protected $table = 'units';
+	
+	protected $keycache = 'cache_units_';
 
 	/**
 	 * The attributes that are mass assignable.

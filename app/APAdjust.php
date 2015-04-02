@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class APAdjust extends Model {
+class APAdjust extends BaseModel {
 
 	/**
 	 * The database table used by the model.
@@ -10,6 +10,8 @@ class APAdjust extends Model {
 	 * @var string
 	 */
 	protected $table = 'ap_adjusts';
+	
+	protected $keycache = 'cache_ap_adjusts_';
 
 	/**
 	 * The attributes that are mass assignable.

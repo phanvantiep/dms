@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Salesman extends Model {
+class Salesman extends BaseModel {
 
 	/**
 	 * The database table used by the model.
@@ -11,6 +11,8 @@ class Salesman extends Model {
 	 */
 	protected $table = 'setups';
 
+	protected $keycache = 'cache_setups_';
+	
 	/**
 	 * The attributes that are mass assignable.
 	 *

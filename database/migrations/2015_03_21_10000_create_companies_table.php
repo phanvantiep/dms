@@ -16,6 +16,7 @@ class CreateCompaniesTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('code', 20);
+			$table->string('slug', 20);
 			$table->string('name', 500);
 			$table->text('description')->nullable();
 			$table->text('short_description')->nullable();
@@ -28,8 +29,8 @@ class CreateCompaniesTable extends Migration {
 			$table->string('address2', 50)->nullable();
 			$table->integer('ward_id')->nullable();
 			$table->integer('district_id')->nullable();
+			$table->integer('province_id')->nullable();
 			$table->string('state', 50)->nullable();
-			$table->string('city', 50)->nullable();
 			$table->string('zipcode', 50)->nullable();
 			$table->string('country_id', 3)->nullable();
 			$table->smallInteger('status');
